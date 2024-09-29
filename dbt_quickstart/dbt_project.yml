@@ -39,5 +39,9 @@ models:
     gen_view:
       +materialized: view
       +database: raw_db
+    transform:
+      +materialized: table
+      +database: raw_db
 vars:
   sch_jaf: 'jaffle_shop'
+  sch_tran: 'transform'
