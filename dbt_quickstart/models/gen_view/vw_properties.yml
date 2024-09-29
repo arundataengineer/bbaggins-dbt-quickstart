@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: vw_customer
+    columns:
+      - name: ID
+        tests:
+          - unique
+          - not_null
+  - name: vw_orders
+    columns: 
+      - name: ID
+        tests:
+          - unique
+          - not_null
+      - name: USER_ID
+        tests:
+          - not_null
+      - name: STATUS
+        tests:
+          - accepted_values:
+              values: ['returned','completed','return_pending','shipped','placed']
