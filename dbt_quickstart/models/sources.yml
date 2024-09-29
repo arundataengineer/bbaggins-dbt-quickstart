@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: jaf_shop
+    description: "Source table info"
+    database: raw_db
+    schema: jaffle_shop
+    tables:
+      - name: customers
+      - name: orders
+  - name: stripe
+    description: "Stripe info"
+    database: raw_db
+    schema: stripe
+    tables:
+      - name: payment
